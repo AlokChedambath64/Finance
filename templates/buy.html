@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <div class = "container">
+        <h1>
+            Buy
+        </h1>
+        <br>
+        <form action = "/buy" method = "post">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="sym" name = "symbol" placeholder="Symbol">
+                <label for="floatingInput">Symbol</label>
+              </div>
+              <div class="form-floating">
+                <input type="integer" class="form-control" id="shares" name = "shares" placeholder="Shares">
+                <label for="floatingPassword">Shares</label>
+              </div>
+              <br>
+              <div class="mb-3">
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+        </form>
+        <br>
+    </div>
+{% endblock %}

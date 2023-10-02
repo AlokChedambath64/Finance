@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ History
+{% endblock %}
+
+{% block main %}
+    <div class = "container">
+        <h1>
+            History
+        </h1>
+        <br>
+        <div class = "section">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th> Symbol</th>
+                        <th> Buy/Sell</th>
+                        <th> Price </th>
+                        <th> Shares </th>
+                        <th>Date and Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in list%}
+                    <tr>
+                        <th>{{row["stock"]}}</th>
+                        <th>{{row["trans"]}}</th>
+                        <th>{{row["price"] | usd}}</th>
+                        <th>{{row["shares"]}}</th>
+                        <th>{{row["dandt"]}}</th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div class = "container">
+        <h1>
+            Portfolio
+        </h1>
+        <br>
+        <div class = "section">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th> Stock</th>
+                        <th> Shares </th>
+                        <th> Price </th>
+                        <th> Value </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in list%}
+                    <tr>
+                        <th>{{row["stock"]}}</th>
+                        <th>{{row["shares"]}}</th>
+                        <th>{{row["price"] | usd}}</th>
+                        <th>{{(row["shares"] * row["price"]) | usd}}</th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th> Balance</th>
+                        <th>Unrealized NetWorth</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th> {{balance|usd}}</th>
+                        <th> {{sum|usd}}</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
