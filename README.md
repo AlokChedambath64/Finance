@@ -29,8 +29,7 @@ Allow a new user to register for an account, rendering an apology view if the fo
 
 ### Index
 The homepage displays a table of the logged-in user's owned stocks, number of shares, current stock price, value of each holding. This view also shows the user's imaginary "cash" balance and the total of their "cash" plus stock value.
-<img width="960" alt="image" src="https://github.com/AlokChedambath64/Finance/assets/110228030/7bfc113c-5337-4fcc-ab25-1b8c1d3fbdd3">
-
+<img width="960" alt="image" src="https://github.com/AlokChedambath64/Finance/assets/110228030/e7f1da18-bb1a-4499-9209-6efc682eca04">
 
 ### Quote
 Allows the user to submit a form to look up a stock's current price, retrieving real-time data from the IEX API. An error message is rendered if the stock symbol is invalid.
