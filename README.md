@@ -5,6 +5,7 @@
 * Flask with session authentication
 * SQL
 * HTML
+* CSS
 * Bootstrap
 
 
